@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewData["Title"] = "home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Calendar</h1>
+    <p>Check what day it is if u forgot</a>.</p>
+    <a href="https://www.kalendarzswiat.pl/kalendarz/2022">Mordo obczaj se jaki mamy dzien</a>
+
+</div>
+
+
+<link rel = "stylesheet" href = "vanilla-calendar.css"/>
+   <script> var exports = { };</script>
+       <script src = "vanilla-calendar.js" ></script >
+    <div class= "vanilla-calendar">
+
+ </div>
+
+ const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+});
+calendar.init();
+
+const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+      date: new Date('2022-01-01'),
+});
+
+const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+      settings: {
+        iso8601: false,
+      },
+});
+calendar.init();
+
+const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+      settings: {
+        selecting: false,
+      },
+});
+calendar.init();
+
+const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+      settings: {
+        range: {
+          min: '2022-05-01',
+          max: '2022-05-13',
+          values: ['2022-05-16', '2022-05-17'],
+        },
+      },
+});
+calendar.init();
+
+const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+      settings: {
+        selected: {
+         date: '2022-05-14',
+         month: 5,
+         year: 2022,
+         holidays: ['2022-05-01', '2022-05-02', '2022-05-03', '2022-05-04'],
+        },
+      },
+});
+calendar.init();
+
+const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+      settings: {
+        isibility: {
+         // hightlights weekends
+         weekend: true,
+         // highlights today
+         today: true,
+         // shows months
+         months: false,
+         // shows years
+         year: true,
+         // shows navigation buttons
+         arrows: {
+          prev: true,
+          next: true,
+         },
+        },
+      },
+});
+calendar.init();
+
+calendar.name.months.custom = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+calendar.name.week.custom = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+calendar.name.arrow.prev.custom = 'Prev';
+calendar.name.arrow.next.custom = 'Next';
+calendar.settings.lang = 'custom';
+calendar.init();
+
